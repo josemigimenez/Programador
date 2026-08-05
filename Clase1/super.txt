@@ -2,3 +2,8 @@ manzanas
 bananas 
 galletitas
 pan
+
+
+azucar
+yerba
+limones
