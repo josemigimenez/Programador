@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>River Plate | Mi página Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">RIVER PLATE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#historia">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Presentación -->
+    <header id="inicio" class="container text-center py-5">
+        <span class="badge text-bg-danger mb-3">El más grande</span>
+        <h1 class="display-4 fw-bold">Bienvenidos al mundo River</h1>
+        <p class="lead">Una pasión que se lleva en el corazón.</p>
+        <a href="#historia" class="btn btn-danger btn-lg">Conocé nuestra historia</a>
+    </header>
+
+    <!-- Mensaje destacado -->
+    <div class="container mb-4">
+        <div class="alert alert-danger text-center" role="alert">
+            ¡La pasión por River se vive todos los días!
+        </div>
+    </div>
+
+    <!-- Tarjetas -->
+    <main id="historia" class="container py-4">
+        <h2 class="text-center mb-4">Conocé a River Plate</h2>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Nuestra historia</h5>
+                        <p class="card-text">
+                            River Plate fue fundado el 25 de mayo de 1901
+                            y es uno de los clubes más importantes de Argentina.
+                        </p>
+                        <a href="https://www.cariverplate.com.ar/" class="btn btn-outline-danger" target="_blank" rel="noopener noreferrer">Sitio oficial</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">El Monumental</h5>
+                        <p class="card-text">
+                            El estadio Mâs Monumental es el hogar de millones
+                            de hinchas y escenario de grandes partidos.
+                        </p>
+                        <span class="badge text-bg-dark">Nuestro estadio</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Nuestra pasión</h5>
+                        <p class="card-text">
+                            La banda roja representa una identidad que
+                            acompaña a los hinchas en todo momento.
+                        </p>
+                        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalRiver">
+                            ¡Vamos River!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Formulario -->
+    <section id="contacto" class="container py-5">
+        <h2 class="text-center mb-4">Dejanos tu opinión</h2>
+
+        <form class="mx-auto" style="max-width: 500px;">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Tu nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Escribí tu nombre">
+            </div>
+
+            <div class="mb-3">
+                <label for="opinion" class="form-label">¿Qué significa River para vos?</label>
+                <textarea class="form-control" id="opinion" rows="3" placeholder="Escribí tu opinión"></textarea>
+            </div>
+
+            <button type="button" class="btn btn-dark">Enviar opinión</button>
+        </form>
+    </section>
+
+    <!-- Ventana modal -->
+    <div class="modal fade" id="modalRiver" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloModal">¡Vamos River!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    Ser de River es una pasión que pasa de generación en generación.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p class="mb-0">Proyecto realizado para la Unidad 2 - Bootstrap</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
