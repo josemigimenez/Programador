@@ -382,3 +382,307 @@ html {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* NUEVA SECCION: NOSOTROS */
+.nosotros {
+    padding: 80px 8%;
+    text-align: center;
+    background: #fffdf9;
+}
+
+.nosotros h2,
+.novedades h2,
+.ubicacion h2 {
+    margin-bottom: 20px;
+}
+
+.nosotros > p:not(.subtitulo) {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* NUEVA SECCION: NOVEDADES */
+.novedades {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 80px 8%;
+    background: #eee6d8;
+}
+
+.novedades-imagen,
+.novedades-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.novedades-imagen img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.novedades-texto p:not(.subtitulo) {
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+/* NUEVA SECCION: UBICACION */
+.ubicacion {
+    padding: 80px 8%;
+    text-align: center;
+    background: #f8f5ef;
+}
+
+.ubicacion p {
+    margin-bottom: 15px;
+}
+
+.ubicacion a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: #b47b24;
+    color: white;
+    text-decoration: none;
+}
+
+.ubicacion a:hover {
+    background: #805216;
+}
+
+/* ADAPTACION A CELULARES */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .novedades {
+        flex-direction: column;
+    }
+
+    .novedades-imagen,
+    .novedades-texto {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==============================
+   ANIMACIONES PARA BEER
+   ============================== */
+
+/* 1. Aparicion suave de la portada */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portada-contenido {
+    animation: aparecer 1.2s ease-out both;
+}
+
+.menu {
+    animation: aparecer 0.8s ease-out both;
+}
+
+/* 2. Efecto en las imagenes */
+.historia-imagenes img,
+.galeria img,
+.novedades-imagen img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.historia-imagenes img:hover,
+.galeria img:hover,
+.novedades-imagen img:hover {
+    transform: scale(1.04);
+    filter: brightness(1.08);
+}
+
+/* 3. Botones animados */
+.boton,
+.ubicacion a {
+    transition: transform 0.3s ease,
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.boton:hover,
+.ubicacion a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* 4. Tarjetas con movimiento */
+.tarjeta {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 5. Logo con efecto */
+.logo {
+    transition: color 0.3s ease,
+                letter-spacing 0.3s ease;
+}
+
+.logo:hover {
+    letter-spacing: 4px;
+}
+
+/* 6. Desplazamiento suave entre secciones */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 7. Respeta a quienes prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* NUEVA SECCION: PRODUCTOS*/
+
+.productos {
+    padding: 70px 8%;
+    text-align: center;
+    background-color: #f8f5ef;
+}
+
+.productos h2,
+.experiencias h2 {
+    color: #30251d;
+    margin-bottom: 15px;
+}
+
+.productos > p:not(.subtitulo) {
+    color: #6b6259;
+    margin-bottom: 35px;
+}
+
+.productos-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.producto {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+}
+
+.producto img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.producto h3 {
+    color: #a8752d;
+    margin: 18px 0 10px;
+}
+
+.producto p {
+    color: #6b6259;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+
+/*NUEVA SECCION: EXPERIENCIAS*/
+
+.experiencias {
+    padding: 70px 8%;
+    background-color: #eee5d7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+.experiencias-texto {
+    flex: 1;
+}
+
+.experiencias-texto p:not(.subtitulo) {
+    color: #5e554c;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.experiencias-imagen {
+    flex: 1;
+}
+
+.experiencias-imagen img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+/* ADAPTACION PARA CELULARES */
+
+@media (max-width: 768px) {
+    .productos-galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .experiencias {
+        flex-direction: column;
+    }
+
+    .experiencias-imagen {
+        width: 100%;
+    }
+
+    .menu ul {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
